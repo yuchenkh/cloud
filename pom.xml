@@ -18,6 +18,7 @@
         <module>order-zookeeper-80</module>
         <module>payment-consul-8006</module>
         <module>order-consul-80</module>
+        <module>order-openfeign-80</module>
     </modules>
 
     <packaging>pom</packaging>

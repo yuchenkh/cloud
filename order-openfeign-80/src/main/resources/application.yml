@@ -1,0 +1,12 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    register-with-eureka: false   # 不再注册到 Eureka Server，仅作为一个服务消费者
+    service-url:
+      defaultZone: http://localhost:7001/eureka, http://localhost:7002/eureka
+
+logging:
+  level:
+    org.example.cloud.order.service.PaymentService: debug
