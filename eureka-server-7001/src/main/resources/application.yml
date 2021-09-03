@@ -8,4 +8,5 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://eureka-server-2:7002/eureka
+#      defaultZone: http://eureka-server-2:7002/eureka         # 集群模式
+      defaultZone: http://eureka-server-1:7001/eureka         # standalone mode

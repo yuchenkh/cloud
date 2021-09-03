@@ -3,7 +3,8 @@ server:
 
 eureka:
   client:
-    register-with-eureka: false   # 不再注册到 Eureka Server，仅作为一个服务消费者
+    register-with-eureka: false   # 不再注册到 Eureka Server，仅作为一个服务消费者到那里拿到支付服务的地址
+    fetch-registry: true          # 如果设为 false 则拿不到支付服务的地址
     service-url:
       defaultZone: http://localhost:7001/eureka, http://localhost:7002/eureka
 
