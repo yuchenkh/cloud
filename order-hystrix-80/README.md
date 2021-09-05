@@ -11,9 +11,16 @@ Feign 形式调用 `payment-hystrix=8001` 的服务。
 
 
 ## Fallback 回退
+当使用 Feign Client 调用外部服务时，服务不可用则运行回退方法。
+
 * 主启动类注解 `@EnableHystrix`
 * 配置文件配置：`feign.hystrix.enabled=true`
 * 在 service 层的相关方法上注解 `@HystrixCommand` 并指定 **回退方法 (Fallback method)**。
+
+### 将回退方法从具体的业务接口中分离出来
+* 定义一个类实现 service 接口
+* 在 service 接口上 `@FeignClient` 注解中指定回退类的名称
+* 配置文件配置：`feign.hystrix.enabled=true`
 
 
 

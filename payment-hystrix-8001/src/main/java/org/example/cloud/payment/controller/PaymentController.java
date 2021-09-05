@@ -29,4 +29,10 @@ public class PaymentController {
     public String timeout(@RequestParam(value = "id") int id) {
         return service.lag(id);
     }
+
+    // 用于测试断路器 Circuit Breaker（服务熔断）
+    @GetMapping(path = "/circuit")
+    public String circuit(@RequestParam(value = "id") int id) {
+        return service.circuit(id);
+    }
 }
